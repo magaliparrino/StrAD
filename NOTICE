@@ -1,3 +1,5 @@
+Online / Static models:
+
 This project incorporates code from TSB-AD (Apache License 2.0), 
 which in turn adapts code from various sources including:
 - PyOD (yzhao062)
@@ -13,3 +15,14 @@ All adapted models have been modified from the TSB-AD source to:
 1. Standardize feature-wise normalization (replacing point-wise standardization).
 2. Implement stateful normalization (parameters fitted on training data and reapplied during inference).
 3. Remove pruning mechanisms (specifically in PCA and RobustPCA)
+
+Streaming models:
+
+- LEAP (Java Implementation)
+    Source: https://infolab.usc.edu/Luan/Outlier/CountBasedWindow/DODDS/
+    Paper: "LEAP: An Efficient and Adaptive Framework for Outlier Detection in Streaming Data"
+    Authors: Luan Tran, Fan Guo, Cyrus Shahabi (USC Infolab)
+
+    License Note: No explicit license was provided in the source directory. 
+    The code is incorporated here as a compiled JAR with a Python wrapper 
+    for research and benchmarking purposes.
