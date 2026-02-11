@@ -11,8 +11,8 @@
 # MODIFICATIONS IN StrAD:
 # - Stateful Feature-wise Scaling: Replaced point-wise (axis=1) z-score with 
 #   feature-wise standardization to preserve sensor-specific variance.
-# - Corrected Inference Pipeline: Fixed decision_function() to transform test data 
-#   using the saved scaler_ state, ensuring distance calculations are consistent with training centers.
+# - Modified Inference Pipeline: modified decision_function() to transform test data 
+#   using the saved scaler_ state, ensuring calculations are consistent with training centers.
 
 
 from __future__ import division
