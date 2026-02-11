@@ -1,0 +1,15 @@
+This project incorporates code from TSB-AD (Apache License 2.0), 
+which in turn adapts code from various sources including:
+- PyOD (yzhao062)
+- Anomaly-Transformer (wuhaixu2016)
+- TimeEval-algorithms (CodeLionX & wenig)
+- FITS (VEWOXIC)
+- OmniAnomaly (NetManAIOps)
+- TimesNet (THUML @ Tsinghua University)
+- TranAD (imperial-qore)
+- USAD (manigalati)
+
+All adapted models have been modified from the TSB-AD source to:
+1. Standardize feature-wise normalization (replacing point-wise standardization).
+2. Implement stateful normalization (parameters fitted on training data and reapplied during inference).
+3. Remove pruning mechanisms (specifically in PCA and RobustPCA)
