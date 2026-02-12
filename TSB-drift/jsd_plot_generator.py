@@ -10,7 +10,7 @@ import pickle
 
 if __name__ == '__main__':
     FILE_DIR = 'Datasets/'#'../../../TSBAD/Datasets/TSB-AD-M/'
-    file_list = ['064_SMD_id_8_Facility_tr_2272_1st_2372.csv']#pd.read_csv('../../../TSBAD/Datasets/File_List/TSB-AD-M-Eva.csv')['file_name'].values
+    file_list = ['009_MSL_id_8_Sensor_tr_714_1st_1390.csv']#pd.read_csv('../../../TSBAD/Datasets/File_List/TSB-AD-M-Eva.csv')['file_name'].values
     output_dir_plot = "./heatmaps/"
     output_dir_mat = "./analysis/"
 
