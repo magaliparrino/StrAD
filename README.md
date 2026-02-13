@@ -53,9 +53,8 @@ To isolate scenarios where streaming updates are theoretically justified, we int
 
 ## 📈 Summary of Findings
 
-* **The Temporal Advantage:** Contrary to popular belief, TSAD methods significantly outperform native streaming approaches in most streaming settings.
 * **Architectural Limitations:** Streaming methods suffer from a focus on point outliers and their efficient but simple architectures that struggle with subtle temporal dependencies.
-
+* **The Temporal Advantage:** Contrary to popular belief, TSAD methods significantly outperform native streaming approaches in most streaming settings.
 
 
 ## 📂 Project Structure
@@ -80,7 +79,7 @@ from sklearn import metrics
 
 # Load your data
 file_name = '009_MSL_id_8_Sensor_tr_714_1st_1390.csv'
-data = pd.read_csv(f"path/to/datasets/{file_name}").iloc[:, 0:-1].values
+df = pd.read_csv(f"path/to/datasets/{file_name}").iloc[:, 0:-1].values
 label = df['Label'].astype(int).to_numpy()
 data = df.iloc[:, 0:-1].values.astype(float)
 
