@@ -205,7 +205,7 @@ class LSTMAD():
         self.model.eval()
         scores = []
         y_hats = []
-        loop = tqdm.tqdm(enumerate(test_loader),total=len(test_loader),leave=True)
+        loop = tqdm.tqdm(enumerate(test_loader),total=len(test_loader),leave=True, disable=True)
         with torch.no_grad():
             for idx, (x, target) in loop:
                 x, target = x.to(self.device), target.to(self.device)

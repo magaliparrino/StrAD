@@ -493,7 +493,7 @@ class AnomalyTransformer():
         #############################################
 
         attens_energy = []
-        loop = tqdm.tqdm(enumerate(test_loader),total=len(test_loader),leave=True)
+        loop = tqdm.tqdm(enumerate(test_loader),total=len(test_loader),leave=True, disable=True)
         with torch.no_grad():
             
             for i, (input_data, _) in loop:

@@ -315,7 +315,7 @@ class TimesNet():
         y_hats = []
         self.anomaly_criterion = nn.MSELoss(reduce=False)
         
-        loop = tqdm.tqdm(enumerate(test_loader),total=len(test_loader),leave=True)
+        loop = tqdm.tqdm(enumerate(test_loader),total=len(test_loader),leave=True, disable=True)
         with torch.no_grad():
             for i, (batch_x, _) in loop:
                 batch_x = batch_x.float().to(self.device)
