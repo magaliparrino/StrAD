@@ -26,3 +26,13 @@ Streaming models:
     License Note: No explicit license was provided in the source directory. 
     The code is incorporated here as a compiled JAR with a Python wrapper 
     for research and benchmarking purposes.
+
+- MCOD (Java Implementation)
+    Source: https://infolab.usc.edu/Luan/Outlier/CountBasedWindow/DODDS/
+    Paper: "Continuous monitoring of distance-based outliers over data streams."
+    Authors: Maria Kontaki, Anastasios Gounaris, Apostolos N. Papadopoulos, Kostas Tsichlas,
+    and Yannis Manolopoulos
+
+    License Note: No explicit license was provided in the source directory. 
+    The code is incorporated here as a compiled JAR with a Python wrapper 
+    for research and benchmarking purposes.
