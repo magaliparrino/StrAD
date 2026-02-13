@@ -42,7 +42,6 @@ def fit_HSTree(data_train, window_size = 100, num_trees = 25, max_depth = 15):
     return clf
 
 def flip_sign(s):
-    # Préserve le type d'origine
     if np.isscalar(s):  # float, int, np.float64
         return -s
     else:
@@ -60,7 +59,6 @@ def fit_RSHash(data_train, sampling_points = 1000, decay = 0.015, num_components
         num_components=num_components,
         num_hash_fns=num_hash_fns
     )
-
     
     wrapped = PostProcessedModel(base_model=base, transform=flip_sign)
     clf = AdapterTSBAD(wrapped)
@@ -74,36 +72,27 @@ def fit_MemStream(data_train, memory_len = 256, beta = 0.1):
     clf.fit(data_train)
     return clf
 
-
 def fit_LEAP(data_train, k=5, R=1.0, slidingWindow=100, slide=10):
     from models.streaming.LEAP import LEAP
-#    jar_path="models/streaming_models/jar_files/leap-1.0.0-jar-with-dependencies.jar"
-    jar_path="/home/d66285/These/TSBAD_Streaming/online_top_k_TSBAD/models/streaming_models/LEAP/target/leap-1.0.0-jar-with-dependencies.jar"
+    jar_path="../models/streaming/jar_files/leap-1.0.0-jar-with-dependencies.jar"
     clf = LEAP(k=k, R=R, W=slidingWindow, slide=slide, jar_path= jar_path, jvm_opts=None)
     clf.fit(data_train)
     return clf
 
 def fit_MCOD(data_train, k=5, R=1.0, W=100, slide=10):
     from models.streaming.MCOD import MCOD
-    jar_path="/home/d66285/These/TSBAD_Streaming/online_top_k_TSBAD/models/streaming_models/jar_files/mcod-1.0.0-jar-with-dependencies.jar"
+    jar_path="/models/streaming/jar_files/mcod-1.0.0-jar-with-dependencies.jar"
     clf = MCOD(k=k, R=R, W=W, jar_path= jar_path)
     clf.fit(data_train)
     return clf
 
 def fit_SWKNN(data_train, slidingWindow = 100, k = 5):
-    from outlier import SWKNN
+    from dSalmon.outlier import SWKNN
     clf = AdapterDSalmon(SWKNN(window = slidingWindow, k = k, k_is_max = False)) 
     return clf
 
-# def fit_xStream(data_train, window= 10, n_estimators= 10,  n_projections= 10, depth= 10):
-#     from outlier import xStream
-#     clf = AdapterDSalmon(xStream(window = window, n_estimators=n_estimators, n_projections=n_projections, depth=depth))
-#     clf.set_initial_sample(data_train)
-#     clf.fit(data_train)
-#     return clf
-
 def fit_xStream(data_train, window= 10, n_estimators= 10,  n_projections= 10, depth= 10):
-    from outlier import xStream
+    from dSalmon.outlier import xStream
     clf = AdapterDSalmon(xStream(window = window, n_estimators=n_estimators, n_projections=n_projections, depth=depth))
     if window < data_train.shape[0]:
         init_data = data_train[:window,:]
@@ -111,42 +100,9 @@ def fit_xStream(data_train, window= 10, n_estimators= 10,  n_projections= 10, de
     return clf
 
 
-# def fit_xStreamPysad(data_train, window = 256, n_chains= 200, n_components= 50, depth= 20):
-#     from pysad.models import xStream
-#     clf = AdapterTSBAD(xStream(window_size = window, n_chains= n_chains, num_components= n_components, depth= depth))
-#     #clf.fit(data_train)
-#     return clf
-
-# def fit_xStream(data_train, **kwargs):
-#     try:
-#         from outlier import xStream
-
-#         slidingWindow = kwargs.get('slidingWindow', 10)
-#         n_estimators = kwargs.get('n_estimators', 10)
-#         n_projections = kwargs.get('n_projections', 10)
-#         depth = kwargs.get('depth', 10)
-#         print(f"slidingWindow: {slidingWindow}, n_estimators: {n_estimators}, n_projections: {n_projections}, depth: {depth}")
-
-#         clf = AdapterDSalmon(xStream(window=slidingWindow, n_estimators=n_estimators, n_projections=n_projections, depth=depth))
-#         clf.set_initial_sample(data_train)
-#         clf.fit(data_train)
-#         return clf
-#     except Exception as e:
-#         import traceback
-#         print("Traceback:")
-#         traceback.print_exc()
-#         raise e
-
-
 def fit_SDOstream(data_train, k=200, T=1000, x = 5):
-    from outlier import SDOstream
+    from dSalmon.outlier import SDOstream
     clf = AdapterDSalmon(SDOstream(k=k, T=T, qv = 0.3, x = x))
     return clf
 
 
-# def fit_RSHash(data_train, sampling_points = 1000, decay = 0.015, num_components = 100, num_hash_fns = 1):
-#     from pysad.models import RSHash
-#     clf  = AdapterTSBAD(RSHash(feature_mins= np.min(data_train, axis = 0), feature_maxes= np.max(data_train, axis = 0),
-#                                sampling_points = sampling_points, decay = decay, num_components = num_components, num_hash_fns = num_hash_fns))
-#     clf.fit(data_train)
-#     return clf
