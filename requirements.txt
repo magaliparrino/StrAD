@@ -14,6 +14,7 @@ stumpy==1.13.0
 tslearn==0.6.4
 TSB_AD
 pysad
+dSalmon
 PyNomaly==0.3.3
 hurst==0.0.5
 arch==7.2.0

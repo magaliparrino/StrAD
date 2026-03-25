@@ -79,7 +79,7 @@ from sklearn import metrics
 
 # Load your data
 file_name = '009_MSL_id_8_Sensor_tr_714_1st_1390.csv'
-df = pd.read_csv(f"path/to/datasets/{file_name}").iloc[:, 0:-1].values
+df = pd.read_csv(f"path/to/datasets/{file_name}")
 label = df['Label'].astype(int).to_numpy()
 data = df.iloc[:, 0:-1].values.astype(float)
 
