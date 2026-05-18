@@ -1,4 +1,4 @@
-# StrAD
+# StrAD Benchmark
 
 
 
