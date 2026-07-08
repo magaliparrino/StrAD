@@ -36,7 +36,7 @@ This document contains the tables for Static/Online and Streaming Time Series An
 
 ### Table 2: Streaming TSAD in **StrAD**
 
-| Acronym | Method | UM (Sec 3.1) | MM (Sec 3.2) |
+| Acronym | Method | Update Mechanism | Memory Management |
 | :--- | :--- | :--- | :--- |
 | | |**Numerical**  | |
 | **LODA** | LODA [[19](#ref-loda)] | Projections | Tumbling Window |
@@ -111,4 +111,8 @@ This document contains the tables for Static/Online and Streaming Time Series An
 
 <a id="ref-memstream"></a>**[28]** S. Bhatia, A. Jain, S. Srivastava, K. Kawaguchi, and B. Hooi. "MemStream: Memory-Based Streaming Anomaly Detection." *WWW '22: The ACM Web Conference 2022*, 2022, pp. 610–621. [DOI](https://doi.org/10.1145/3485447.3512221)
 
-<a id="ref-tsbad"></a>**[29]** Q. Liu, and J. Paparrizos. "The Elephant in the Room: Towards {A} Reliable Time-Series Anomaly Detection Benchmark." *WWW '22: The ACM Web Conference 2022*, 2022, pp. 610–621. [DOI](https://doi.org/10.1145/3485447.3512221)
+<a id="ref-tsbad"></a>**[29]** Q. Liu, and J. Paparrizos. "The Elephant in the Room: Towards {A} Reliable Time-Series Anomaly Detection Benchmark." *In Advances in Neural
+Information Processing Systems 38: Annual Conference on Neural Information
+Processing Systems 2024, NeurIPS 2024, Vancouver, BC, Canada*, December 10
+15, 2024, Amir Globersons, Lester Mackey, Danielle Belgrave, Angela Fan,
+Ulrich Paquet, Jakub M. Tomczak, and Cheng Zhang (Eds.). [LINK](http://papers.nips.cc/paper_files/paper/2024/hash/c3f3c690b7a99fba16d0efd35cb83b2c-Abstract-Datasets_and_Benchmarks_Track.html)
