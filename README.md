@@ -193,20 +193,19 @@ To isolate scenarios where streaming updates are theoretically justified, we int
 ## Citation
 If you use this work, please consider citing the associated paper
 ```bibtex
-@inproceedings{parrino2026streaming,
-  author    = {Parrino, Magali and Ajenjo, Antoine and Remy, Emmanuel and Stephan, Pierre and Senellart, Pierre and Boniol, Paul},
-  title     = {In a Streaming World, Should You Stand Still? A Comprehensive Benchmark of Anomaly Detection in Streams},
-  booktitle = {Proceedings of the 32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining},
-  series    = {KDD '26},
-  volume    = {2},
-  year      = {2026},
-  month     = {8},
-  location  = {Jeju Island, Republic of Korea},
-  publisher = {Association for Computing Machinery},
-  address   = {New York, NY, USA},
-  doi       = {10.1145/3770855.3817495},
-  isbn      = {979-8-4007-2259-2/2026/08},
-  numpages  = {12}
+@inproceedings{parrino:hal-05654228,
+  TITLE = {{In a Streaming World, Should You Stand Still? A Comprehensive Benchmark of Anomaly Detection in Streams}},
+  AUTHOR = {Parrino, Magali and Ajenjo, Antoine and Remy, Emmanuel and Stephan, Pierre and Senellart, Pierre and Boniol, Paul},
+  URL = {https://inria.hal.science/hal-05654228},
+  BOOKTITLE = {{Proceedings of the 32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining V.2 (KDD '26)}},
+  ADDRESS = {Jeju, South Korea},
+  YEAR = {2026},
+  MONTH = Aug,
+  DOI = {10.1145/3770855.3817495},
+  KEYWORDS = {Data stream mining ; Time series analysis ; Time Series ; Benchmark ; Anomaly Detection ; Stream},
+  PDF = {https://inria.hal.science/hal-05654228v1/file/v2dtb173_CameraReady.pdf},
+  HAL_ID = {hal-05654228},
+  HAL_VERSION = {v1},
 }
 ```
 
