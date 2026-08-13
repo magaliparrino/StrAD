@@ -6,7 +6,10 @@
 
 **StrAD** is a large-scale experimental framework designed to evaluate and compare *streaming* versus *static* Time Series Anomaly Detection (TSAD) methods under unified, streaming conditions on real-world data.
 
+## Research Papers:
 
+- [KDD 2026](https://inria.hal.science/hal-05654228)
+- [ECML-PKDD 2026](https://inria.hal.science/hal-05659049)
 
 ##  Overview
 
